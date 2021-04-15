@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 // auth routes
 const db = require('./db/index.js');
 const apiRouter = express.Router();
+const userRoutes = require('./routes/user');
 userRoutes(userRouter, db);
 app.use('/user', userRoutes);
 
